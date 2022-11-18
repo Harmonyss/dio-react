@@ -6,7 +6,7 @@ import{
 import { Home } from "./pages/home";
 import { Login } from "./pages/login";
 import { Feed } from "./pages/feed";
-import React from "react";
+import { Cad } from "./pages/cadastro"
 function App() {
   return (
     <Router>
@@ -14,6 +14,7 @@ function App() {
         <Route path='/' element = {<Home/>}/>
         <Route path='/login' element = {<Login/>}/>
         <Route path='/feed' element = {<Feed/>}/>
+        <Route path="/cadastro" element = {<Cad/>}/>
       </Routes>
     </Router>
 

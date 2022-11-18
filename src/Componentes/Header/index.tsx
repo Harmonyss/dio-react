@@ -12,13 +12,19 @@ import {
     Wrapper
 } from "./styles"
 import { Button } from "../Button";
-const Header = ({autenticado}) =>{
+import {IHeader} from "./types"
+
+const Header = ({autenticado}: IHeader) =>{
 
     const navegate = useNavigate();
 
     const handleClickSingIn  = () => {
         navegate("/login")
     } 
+
+    const handleClickCadastrar = () => {
+        navegate("/cadastro")
+    }
     return(
         <Wrapper>
             <Container>
@@ -41,7 +47,7 @@ const Header = ({autenticado}) =>{
                     <>
                         <MenuRight href="/">Home</MenuRight>
                         <Button title="Entrar" onClick={handleClickSingIn}/>
-                        <Button title="Cadastrar"/>
+                        <Button title="Cadastrar" onClick={handleClickCadastrar}/>
                     </>
                     )}
                     
